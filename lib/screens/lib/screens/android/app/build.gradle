@@ -1,0 +1,21 @@
+// android/app/build.gradle
+android {
+    namespace "com.yourdomain.streamex"
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.yourdomain.streamex"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug  // Use debug key for testing
+            minifyEnabled false
+            shrinkResources false
+        }
+    }
+}
